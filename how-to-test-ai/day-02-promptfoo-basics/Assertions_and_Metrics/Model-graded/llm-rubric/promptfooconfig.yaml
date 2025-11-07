@@ -1,0 +1,12 @@
+description: "Model-graded – llm-rubric (tweet under 50 words)"
+providers:
+  - openai:gpt-4o-mini
+
+prompts:
+  - "Write a tweet announcing our new AI product."
+
+tests:
+  - assert:
+      - type: llm-rubric #llm-rubric assertion is used to evaluate the model's response based on a custom rubric
+        value: "Response is enthusiastic and under 50 words."
+        threshold: 0.7          # require a minimum score of 0.7

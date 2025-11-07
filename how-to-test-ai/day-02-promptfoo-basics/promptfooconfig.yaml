@@ -1,0 +1,11 @@
+# Master config to pull in all your sub-folder configs
+
+extends:
+  - "Assertions_and_Metrics/Deterministic/Contains/promptfooconfig.yaml"
+  - "Assertions_and_Metrics/Deterministic/Regex/promptfooconfig.yaml"
+  - "Assertions_and_Metrics/Model-graded/answer-relevance/promptfooconfig.yaml"
+  - "Assertions_and_Metrics/Model-graded/factuality/promptfooconfig.yaml"
+  - "Assertions_and_Metrics/Model-graded/llm-rubric/promptfooconfig.yaml"
+
+providers:
+  - openai:gpt-4o-mini

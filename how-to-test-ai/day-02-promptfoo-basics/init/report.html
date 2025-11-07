@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My eval</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>topic</th>
+        
+        <th>[openai:gpt-5-mini] Write a tweet about {{topic}}</th>
+        
+        <th>[openai:gpt-5] Write a tweet about {{topic}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="bananas">bananas</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Go bananas! 🍌 Nature’s original energy bar — packed with potassium, fiber, and instant snack satisfaction. Peel, eat, smile. #BananaLove
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Go bananas! 🍌 Nature’s original energy bar — packed with potassium, fiber, and instant snack satisfaction. Peel, eat, smile. #BananaLove
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Did you know bananas are technically berries? Meanwhile I’m just here enjoying nature’s portable energy bar with a compostable wrapper. Totally a-peel-ing. 🍌 #Bananas #FunFact
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Did you know bananas are technically berries? Meanwhile I’m just here enjoying nature’s portable energy bar with a compostable wrapper. Totally a-peel-ing. 🍌 #Bananas #FunFact
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="avocado toast">avocado toast</td>
+          
+          <td data-content="[PASS] (0.50)
+
+Avocado toast: proof that a few smashed green things and good bread can solve 90% of life&#39;s problems. 🥑🍞 #BreakfastWin
+
+Want more tones (funny, fancy, sustainable)?
+
+Pass Reason: All assertions passed">[PASS] (0.50)
+
+Avocado toast: proof that a few smashed green things and good bread can solve 90% of life&#39;s problems. 🥑🍞 #BreakfastWin
+
+Want more tones (funny, fancy, sustainable)?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (0.50)
+
+Sourdough + smashed avo + lemon squeeze + chili flakes + flaky salt = a 5-minute breakfast that thinks it’s a lifestyle. 🥑🍞 #AvocadoToast
+
+Pass Reason: All assertions passed">[PASS] (0.50)
+
+Sourdough + smashed avo + lemon squeeze + chili flakes + flaky salt = a 5-minute breakfast that thinks it’s a lifestyle. 🥑🍞 #AvocadoToast
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="new york city">new york city</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+The output is poetic and vivid, but it does not contain humor or any attempt at being funny.
+---
+Concrete cathedrals, curbside coffee, and a skyline that keeps secrets — New York crams a million lives into one restless, beautiful city. #NYC #CityThatNeverSleeps
+
+Fail Reason: The output is poetic and vivid, but it does not contain humor or any attempt at being funny.">[FAIL] (0.00)
+
+The output is poetic and vivid, but it does not contain humor or any attempt at being funny.
+---
+Concrete cathedrals, curbside coffee, and a skyline that keeps secrets — New York crams a million lives into one restless, beautiful city. #NYC #CityThatNeverSleeps
+
+Fail Reason: The output is poetic and vivid, but it does not contain humor or any attempt at being funny.</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+The output is poetic and vivid in its imagery, but it does not contain humor or elements intended to be funny.
+---
+New York City 🗽: where bagels taste better at 3am, the skyline writes its own soundtrack, and every block feels like a new passport stamp. From subway symphonies to sunset rooftops—always awake, always alive. #NYC #CityThatNeverSleeps
+
+Fail Reason: The output is poetic and vivid in its imagery, but it does not contain humor or elements intended to be funny.">[FAIL] (0.00)
+
+The output is poetic and vivid in its imagery, but it does not contain humor or elements intended to be funny.
+---
+New York City 🗽: where bagels taste better at 3am, the skyline writes its own soundtrack, and every block feels like a new passport stamp. From subway symphonies to sunset rooftops—always awake, always alive. #NYC #CityThatNeverSleeps
+
+Fail Reason: The output is poetic and vivid in its imagery, but it does not contain humor or elements intended to be funny.</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

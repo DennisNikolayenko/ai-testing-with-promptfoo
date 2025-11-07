@@ -1,0 +1,37 @@
+# promptfooconfig.yaml
+
+# description: "Config providers demo"
+# providers:
+#   - file://providers.yaml
+# config:                       # adds additional criteria for providers
+#     temperature: 0.7
+#     max_tokens: 150
+
+# prompts:
+#   - 'Translate the following text to French: "{{text}}"'
+
+# tests:
+#   - vars:                             # test case 1
+#       text: "Hello, how are you?"
+#   - assert:                           # test case 2
+#       - type: contains          
+#         value: "Bonjour"
+
+
+# HERE IS THE STRUCTURE WITH ONE TEST CASE (PROPER)
+description: "Config providers demo"
+providers: 
+    - file://providers.yaml
+config:                       # adds additional criteria for providers
+      temperature: 0.7
+      max_tokens: 150
+
+prompts:
+  - 'Translate the following text to French: "{{text}}"'
+
+tests:
+  - vars:
+      text: "Hello, how are you?"
+    assert:
+      - type: contains
+        value: "Bonjour"

@@ -1,0 +1,15 @@
+description: "Variables in test section"
+providers:
+  - openai:gpt-4o
+
+prompts:
+  - "Explain {{concept}}"
+
+tests:
+  - vars:
+      concept: "ASI"      #this is the only value user changes. Expecting that the output will repeat the concept in the asnwwer.
+    assert:
+      - type: icontains
+        value: "{{concept}}"
+
+        # I suggested this during October cohort day 2 exercise. I successfully ran promptfoo test with variable in test section.

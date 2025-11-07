@@ -1,0 +1,5 @@
+[
+  { "role": "user", "content": "I want to test my knowledge of HomeFlo. I want you to quiz me. Ask me a Yes/No question. After I answer a) let me know if my answer is correct or wrong and b) ask me another Yes/No question." },
+  { "role": "assistant", "content": "Is the HomeFlo project focused on developing a mobile application for both iOS and Android platforms?"},
+  { "role": "user", "content": "Yes"}
+]

@@ -1,0 +1,35 @@
+# promptfooconfig.yaml
+description: "Local Llama-3 (LM Studio) + cloud models"
+
+providers:
+  # LOCAL MODEL served by LM Studio (OpenAI-compatible)
+  - id: openai:chat                                 # generic chat endpoint
+    config:
+      apiBaseUrl: http://localhost:1234/v1  
+      # apiBaseUrl: http://127.0.0.1:1234       # copying from LM Studio reachable URL does not work, must use localhost
+      apiKey: lmstudio                              # any string works
+      model: gemma-2-2b-it           # from GET /v1/models
+      temperature: 0.7
+      max_tokens: 300
+
+prompts:
+  - 'Translate the following text to German: "{{text}}"'
+
+tests:
+  - vars:
+      text: "When are we going to Berlin?"
+    assert: 
+      - type: llm-rubric
+        value: response should be factually accurate, and to the point. 
+
+
+        #Useful info: 
+#If your local model is open-weight (e.g., Llama 3, Mistral, Gemma, Falcon, etc.) your company can fine-tune it internally.
+
+# You’d download the model weights and then use your own data + fine-tuning framework (e.g. Hugging Face PEFT, LoRA, QLoRA) to adapt it.
+# You don’t need to involve the original developers — as long as you respect the model’s license (usually “research and commercial use allowed”).
+
+# For example:
+# Meta’s Llama 3 → fine-tune freely for internal company use.
+# Google’s Gemma → allows limited fine-tuning under its terms.
+# Mistral 7B → open license, often used for in-house fine-tuning.
