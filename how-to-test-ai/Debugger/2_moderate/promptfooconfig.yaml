@@ -1,7 +1,6 @@
-prompts:
-  -  
+prompts: |-  
     You are a customer support assistant. Respond to the user.
-    User: {{message}}
+    User {{message}}
 
 providers:
   # OpenAI GPT-4
@@ -11,10 +10,10 @@ providers:
       max_tokens: 150
   
   # Anthropic Claude
-  - id:  claude-3-5-sonnet-latest
-    config:
-      temperature: 0.7
-      max_tokens: 150
+  # - id:  claude-3-5-sonnet-latest
+  #   config:
+  #     temperature: 0.7
+  #     max_tokens: 150
 
 tests:
   - var: 
@@ -29,7 +28,7 @@ tests:
       
   - vars: 
       message: "I need help, my account was hacked."
-      assert:
+    assert:
         - type: contains-any
           value: ["secure", "password", "2FA", "support"]
         - type: not-contains-any
