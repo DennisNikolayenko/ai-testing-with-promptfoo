@@ -1,0 +1,31 @@
+# 1) Launch tweet: quality + performance budget
+description: "Ensure the tweet is enthusiastic, under 50 words, mentions AI, and stays cheap & fast."
+providers:
+  - id: openai:gpt-4o 
+  - id: openai:gpt-5                           
+  - id: anthropic:messages:claude-sonnet-4-20250514
+
+config:
+  temperature: 0.7
+  max_tokens: 200
+
+prompts:
+  - "Write a brief post about the state of AI revolution."
+
+tests:
+      - type: assert-set
+        metric: Performance
+        assert:
+          - type: cost
+            threshold: 0.0030
+          - type: latency
+            threshold: 2000
+
+# COST BASED ON 100K REQUESTS PER MONTH (Small-Medium SaaS)
+# COST BASED ON 100K REQUESTS PER DAY (very large enterprise with high traffic)
+
+            #To run the cost dashboard: 
+            # 1. promptfoo eval
+            # 2. promptfoo list evals (choose latest eval)
+            # 3. promptfoo export eval eval-abc123-2025-11-07T22:43:28 > results.json
+            # 4. python3 cost.py

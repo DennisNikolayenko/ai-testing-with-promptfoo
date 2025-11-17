@@ -1,0 +1,473 @@
+{
+  "evalId": "eval-Fim-2025-11-17T23:19:36",
+  "results": {
+    "version": 3,
+    "timestamp": "2025-11-17T23:19:36.594Z",
+    "prompts": [
+      {
+        "raw": "Write a brief post about the state of AI revolution.",
+        "label": "Write a brief post about the state of AI revolution.",
+        "id": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "provider": "openai:gpt-4o",
+        "metrics": {
+          "score": 0.5,
+          "testPassCount": 0,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 1,
+          "totalLatencyMs": 16,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 261,
+            "total": 261,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.002475
+        }
+      },
+      {
+        "raw": "Write a brief post about the state of AI revolution.",
+        "label": "Write a brief post about the state of AI revolution.",
+        "id": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "provider": "openai:gpt-5",
+        "metrics": {
+          "score": 0,
+          "testPassCount": 0,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 2,
+          "totalLatencyMs": 13,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 758,
+            "total": 758,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.00743125
+        }
+      },
+      {
+        "raw": "Write a brief post about the state of AI revolution.",
+        "label": "Write a brief post about the state of AI revolution.",
+        "id": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "provider": "anthropic:messages:claude-sonnet-4-20250514",
+        "metrics": {
+          "score": 0.5,
+          "testPassCount": 0,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 1,
+          "totalLatencyMs": 5,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 327,
+            "total": 327,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.0046890000000000005
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0.0046890000000000005,
+        "error": "Cost 0.0047 is greater than threshold 0.003",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.5,
+          "reason": "Cost 0.0047 is greater than threshold 0.003",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Cost 0.0047 is greater than threshold 0.003",
+              "assertion": {
+                "type": "cost",
+                "threshold": 0.003
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "latency",
+                "threshold": 2000
+              }
+            }
+          ]
+        },
+        "id": "d38f9d6b-fe56-4501-9fd9-446cd2aba82d",
+        "latencyMs": 5,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Write a brief post about the state of AI revolution.",
+          "label": "Write a brief post about the state of AI revolution."
+        },
+        "promptId": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "promptIdx": 2,
+        "provider": {
+          "id": "anthropic:messages:claude-sonnet-4-20250514",
+          "label": ""
+        },
+        "response": {
+          "output": "# The AI Revolution: Where We Stand Today\n\nWe're living through a remarkable inflection point in technology. The AI revolution isn't coming—it's here, reshaping how we work, create, and solve problems in real-time.\n\n**What's happening now:**\n- AI tools have moved from research labs to everyday workflows\n- Creative industries are being transformed by generative AI\n- Scientific breakthroughs are accelerating through AI-assisted research\n- Entire job categories are evolving, not disappearing, but fundamentally changing\n\n**The reality check:**\nThis isn't the sci-fi singularity many predicted. Instead, it's messier, more gradual, and more human than expected. We're seeing incredible capabilities alongside significant limitations—AI that can write poetry but struggles with basic reasoning, or systems that excel at pattern recognition but lack true understanding.\n\n**What matters most:**\nThe winners in this revolution won't necessarily be those with the most advanced AI, but those who best integrate these tools with human creativity, judgment, and values. The question isn't whether AI will replace us, but how thoughtfully we'll choose to work alongside it.\n\nWe're still in the early chapters of this story. The most interesting developments may not be the technology itself, but how we adapt our institutions, education, and society to harness its potential responsibly.\n\n*What changes are you seeing in your field? The revolution looks different from every vantage point.*",
+          "tokenUsage": {
+            "cached": 327,
+            "total": 327
+          },
+          "finishReason": "stop",
+          "cost": 0.0046890000000000005
+        },
+        "score": 0.5,
+        "success": false,
+        "testCase": {
+          "type": "assert-set",
+          "metric": "Performance",
+          "assert": [
+            {
+              "type": "cost",
+              "threshold": 0.003
+            },
+            {
+              "type": "latency",
+              "threshold": 2000
+            }
+          ],
+          "vars": {},
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0.00743125,
+        "error": "Latency 18139ms is greater than threshold 2000ms",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Latency 18139ms is greater than threshold 2000ms",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Cost 0.0074 is greater than threshold 0.003",
+              "assertion": {
+                "type": "cost",
+                "threshold": 0.003
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Latency 18139ms is greater than threshold 2000ms",
+              "assertion": {
+                "type": "latency",
+                "threshold": 2000
+              }
+            }
+          ]
+        },
+        "id": "256c824d-3490-43ff-b433-ad6cede9a201",
+        "latencyMs": 13,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Write a brief post about the state of AI revolution.",
+          "label": "Write a brief post about the state of AI revolution."
+        },
+        "promptId": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-5",
+          "label": ""
+        },
+        "response": {
+          "output": "The AI revolution has shifted from flashy demos to everyday infrastructure. Frontier models keep improving, but the real differentiation now lives in data quality, product design, and trust. We’re moving from “copilots” that assist to agents that take actions, yet reliability, evaluation, and safe autonomy remain the hard part. Multimodal systems are becoming default, and on‑device inference is rising where latency, privacy, or cost matter. In enterprises, the biggest wins are still unglamorous: automating workflows, reducing cycle time, and tightening feedback loops between users and models. Open and closed ecosystems coexist; synthetic data and domain fine‑tuning help, but governance, provenance, and model monitoring matter more as scale grows. Bottlenecks are real—compute, energy, and talent—so efficient architectures and thoughtful scoping beat brute force. What’s next isn’t magic reasoning; it’s dependable systems that combine models, tools, and guardrails to deliver measurable outcomes. The playbook: start narrow, integrate deeply, instrument everything, keep humans in the loop, and iterate fast.",
+          "tokenUsage": {
+            "cached": 758,
+            "total": 758
+          },
+          "cached": true,
+          "latencyMs": 18139,
+          "finishReason": "stop",
+          "cost": 0.00743125,
+          "guardrails": {
+            "flagged": false
+          }
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "type": "assert-set",
+          "metric": "Performance",
+          "assert": [
+            {
+              "type": "cost",
+              "threshold": 0.003
+            },
+            {
+              "type": "latency",
+              "threshold": 2000
+            }
+          ],
+          "vars": {},
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0.002475,
+        "error": "Latency 4443ms is greater than threshold 2000ms",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.5,
+          "reason": "Latency 4443ms is greater than threshold 2000ms",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "cost",
+                "threshold": 0.003
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Latency 4443ms is greater than threshold 2000ms",
+              "assertion": {
+                "type": "latency",
+                "threshold": 2000
+              }
+            }
+          ]
+        },
+        "id": "46326479-3a05-49b6-b8f9-531294e73101",
+        "latencyMs": 16,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Write a brief post about the state of AI revolution.",
+          "label": "Write a brief post about the state of AI revolution."
+        },
+        "promptId": "0f085d0451d0a15886b04954f6802c0127ff3530e8f83fef3dc39c6fd1b12b77",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "The AI revolution continues to accelerate, permeating nearly every industry with transformative potential. As of 2023, we're witnessing unprecedented advances in machine learning, natural language processing, and computer vision. AI technologies are becoming increasingly sophisticated, with large language models like GPT-4 pushing the boundaries of human-machine interaction.\n\nIndustries such as healthcare, finance, and transportation are harnessing AI to optimize operations, enhance decision-making, and foster innovation. In healthcare, AI-powered diagnostic tools are improving accuracy and efficiency, while in finance, AI algorithms are refining risk assessment and fraud detection. Autonomous vehicles and AI-driven logistics are revolutionizing transportation and supply chain management.\n\nDespite its benefits, the AI revolution presents challenges, including ethical considerations around data privacy, bias, and the socio-economic impact of automation. Policymakers, researchers, and businesses are actively engaging in discussions to address these issues, ensuring that AI evolves in a manner that is ethical, equitable, and beneficial for all.\n\nOverall, the AI revolution is reshaping the modern world, ushering in a new era of possibilities. As we continue to explore and harness the capabilities of AI, it is vital to navigate its complexities with thoughtful consideration and a focus on human-centric development.",
+          "tokenUsage": {
+            "cached": 261,
+            "total": 261
+          },
+          "cached": true,
+          "latencyMs": 4443,
+          "finishReason": "stop",
+          "cost": 0.002475,
+          "guardrails": {
+            "flagged": false
+          }
+        },
+        "score": 0.5,
+        "success": false,
+        "testCase": {
+          "type": "assert-set",
+          "metric": "Performance",
+          "assert": [
+            {
+              "type": "cost",
+              "threshold": 0.003
+            },
+            {
+              "type": "latency",
+              "threshold": 2000
+            }
+          ],
+          "vars": {},
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      }
+    ],
+    "stats": {
+      "successes": 0,
+      "failures": 3,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 1346,
+        "total": 1346,
+        "numRequests": 3,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "description": "Ensure the tweet is enthusiastic, under 50 words, mentions AI, and stays cheap & fast.",
+    "prompts": [
+      "Write a brief post about the state of AI revolution."
+    ],
+    "providers": [
+      {
+        "id": "openai:gpt-4o"
+      },
+      {
+        "id": "openai:gpt-5"
+      },
+      {
+        "id": "anthropic:messages:claude-sonnet-4-20250514"
+      }
+    ],
+    "tests": [
+      {
+        "type": "assert-set",
+        "metric": "Performance",
+        "assert": [
+          {
+            "type": "cost",
+            "threshold": 0.003
+          },
+          {
+            "type": "latency",
+            "threshold": 2000
+          }
+        ]
+      }
+    ],
+    "sharing": false,
+    "extensions": []
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.119.6",
+    "nodeVersion": "v24.8.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2025-11-17T23:20:19.046Z",
+    "evaluationCreatedAt": "2025-11-17T23:19:36.594Z",
+    "author": "nikolayenkodennis@gmail.com"
+  }
+}
