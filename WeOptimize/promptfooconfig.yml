@@ -4,7 +4,7 @@ prompts:
   - 'What is the status of the ticket {{ticket}}'
 
 providers:
-  - id: 'https://api.weoptimize.ai/chats/promptfoo'
+  - id: 'YOUR-URL(API endpoint)-HERE'
     config:
       method: 'POST'
       headers:
@@ -13,7 +13,7 @@ providers:
       body:
         email: 'nikolayenkodennis@gmail.com'
         message: '{{prompt}}'
-      transformResponse: 'json.message'
+      transformResponse: 'json.response'
 
 tests:
   - vars:
