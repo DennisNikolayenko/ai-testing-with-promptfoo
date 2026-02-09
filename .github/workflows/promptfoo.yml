@@ -18,9 +18,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          
-      - name: Install dependencies
-        run: npm install
       
       - name: Install promptfoo
         run: npm install -g promptfoo
@@ -32,7 +29,7 @@ jobs:
           # Add other API keys as needed
         run: |
           # Find all directories containing promptfooconfig.yaml
-          find . -type f -name "promptfooconfig.yaml" | while read config; do
+          find 2-promptfoo-basics -type f -name "promptfooconfig.yaml" | while read config; do
             dir=$(dirname "$config")
             echo "Running evaluation in: $dir"
             cd "$dir"
