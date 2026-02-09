@@ -1,0 +1,5 @@
+Run a cheap suite (contains, regex, exact match)
+
+Only send failures to a second Promptfoo config with LLM rubrics (factuality, etc)
+
+This is very common in CI pipelines.
