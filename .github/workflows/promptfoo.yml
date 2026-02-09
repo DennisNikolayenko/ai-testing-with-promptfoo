@@ -1,0 +1,50 @@
+name: Promptfoo Evals
+
+on:
+  push:
+    branches: [ main, develop ]  # Adjust branches as needed
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-evals:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Install promptfoo
+        run: npm install -g promptfoo
+      
+      - name: Run all promptfoo evaluations
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Add other API keys as needed
+        run: |
+          # Find all directories containing promptfooconfig.yaml
+          find . -type f -name "promptfooconfig.yaml" | while read config; do
+            dir=$(dirname "$config")
+            echo "Running evaluation in: $dir"
+            cd "$dir"
+            promptfoo eval
+            cd - > /dev/null
+          done
+      
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: promptfoo-results
+          path: |
+            **/output/
+            **/promptfoo-results/
