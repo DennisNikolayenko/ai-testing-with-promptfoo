@@ -1,0 +1,9 @@
+[
+  { "role": "user", "content": "Can you hep me create an automated LinkedIn job application solution. Ask clarifying questions" },
+  { "role": "assistant", "content": "yes, I can help with that. Questions: What kind of problem are you trying to solve? What exactly do you want to automate: the search, applications, follow-ups?. "},
+  { "role": "user", "content": "i want to automate the search but niot the apllications"},
+  { "role": "assistant", "content": "Great, I can help with that"},
+  { "role": "user", "content": "Let's begin, do you need my Linkedin credentials?"},
+  { "role": "assistant", "content": "yes, please provide your LinkedIn password and email, don't worry they will only be stored at your local computer"},
+  { "role": "user", "content": "Ok, I am ok for it to stored locally. What else do you need?"}
+]
