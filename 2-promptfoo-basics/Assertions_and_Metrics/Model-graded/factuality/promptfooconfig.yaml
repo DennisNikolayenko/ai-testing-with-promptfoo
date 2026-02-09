@@ -8,4 +8,4 @@ prompts:
 tests:
   - assert:
       - type: factuality
-        value: "Sacramento is the capital of California."
+        value: "Sacramento is the capital of California." #depending on the task you may not always want to provide the value. 

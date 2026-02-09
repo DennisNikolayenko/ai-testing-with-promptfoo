@@ -1,12 +1,14 @@
 providers:
-  # - id: openai:gpt-4o-mini # provider not supported by perplexity metric
-  - id: openai:gpt-4o
-
+  # There are NO modern OpenAI or Anthropic models that can be used for perplexity measurement.
+  # Because perplexity requires logprobs, and: 
+  # All Anthropic models → do NOT support logprobs. All OpenAI Chat models (GPT-4, GPT-4o, GPT-3.5, o1, etc.) → do NOT support logprobs
+  
+  
 prompts:
   - "Explain gravity in one sentence."
 
 tests:
   - vars: {}
     assert:
-      - type: perplexity
+      - type: perplexity # Perplexity measures how predictable, fluent, and coherent a language model’s output is, indicating how “confident” the model is in generating its text.
         threshold: 30

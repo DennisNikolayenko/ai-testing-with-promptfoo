@@ -25,7 +25,7 @@ for provider in sorted(cost_sum.keys()):
     runs = count_sum[provider]
     avg = total_cost / runs if runs else 0
     cost_100k = avg * 100_000
-    cost_year = cost_100k * 12  # assuming 100k/day
+    cost_year = cost_100k * 12  # assuming 100k/month
     rows.append((provider, avg, cost_100k, cost_year))
 
 # Dynamic column widths

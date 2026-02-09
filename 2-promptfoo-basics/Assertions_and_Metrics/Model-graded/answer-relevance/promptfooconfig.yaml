@@ -1,9 +1,10 @@
 description: "Model-graded – answer-relevance"
 providers:
-  - openai:gpt-4o
+  - openai:gpt-5
 
 prompts:
-  - "Explain the process of photosynthesis in simple terms."
+  - "Explain the process of photosynthesis in simple terms." #SIMPLE TERMS! 
+  # - "What operating system is used to run US economy?" 
 
 tests:
   - assert:

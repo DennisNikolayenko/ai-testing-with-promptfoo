@@ -8,7 +8,13 @@ providers:
   - openai:gpt-4o-mini
   - openai:gpt-4
 
+defaultTest:  # if CSV file does not contain assertions, YAML should have assertions. 
+  assert:
+    - type: contains
+      value: "{{_expectedAnswer}}"
 
 tests: 
   # - file://tests/tests_with_metadata.csv # To run selected metadata tags - promptfoo eval --filter-metadata category=math 
-  - file://tests/tests_with_tags.csv # To run selected tags - promptfoo eval --filter-metadata tags=ai
+  # - file://tests/tests_with_tags.csv # To run selected tags - promptfoo eval --filter-metadata tags=ai
+  # - file://tests/2_2.csv
+  - file://tests/basic_tests.csv

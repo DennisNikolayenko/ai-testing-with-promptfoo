@@ -2,16 +2,16 @@
 description: "Local Llama-3 (LM Studio) + cloud models"
 
 providers:
-  - id: openai:gpt-4o                               # commercial
-  - id: anthropic:messages:claude-sonnet-4-20250514 # commercial
+  # - id: openai:gpt-4o                               # commercial
+  # - id: anthropic:messages:claude-sonnet-4-20250514 # commercial
 
-  # LOCAL MODEL served by LM Studio (OpenAI-compatible)
-  - id: openai:chat:llama-3.2-3b-instruct                               # generic chat endpoint
+ # LOCAL MODEL served by LM Studio (OpenAI-compatible)
+  - id: openai:chat:meta-llama-3.2-1b-instruct-ft-sarcasm #openai:chat is the proper id for connecting LM studio to promptfoo. So no matter the model, this should be the provider line (openai:chat).
     config:
-      apiBaseUrl: http://localhost:1234/v1          
-      apiKey: lmstudio                              # any string works
+      apiBaseUrl: http://127.0.0.1:1234/v1
+      apiKey: lmstudio
       temperature: 0.7
-      max_tokens: 300
+      max_tokens: 150
 
 prompts:
   - 'Translate the following text to French: "{{text}}"'
