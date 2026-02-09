@@ -1,5 +1,0 @@
-[
-  { "role": "user", "content": "I want to test my knowledge of HomeFlo. I want you to quiz m" },
-  { "role": "assistant", "content": "Is the HomeFlo project focused on developing a mobile application for both iOS and Android platforms?"},
-  { "role": "user", "content": "Yes"}
-]
